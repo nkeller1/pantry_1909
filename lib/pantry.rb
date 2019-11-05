@@ -11,15 +11,11 @@ class Pantry
   end
 
   def restock(ingredient, amount)
-    @stock[:ingredient] = amount
-    # require "pry"; binding.pry
-    amount.sum do |amt|
-      require "pry"; binding.pry
-        add << amt
-    end
-    # @stock.values.map do |add|
-    #   add
-    # end
+    @stock.reduce({}) do |ingredient, amount|
+    ingredient[:key] = amount
+    require "pry"; binding.pry
+    ingredient
+  end
   end
 
 end
