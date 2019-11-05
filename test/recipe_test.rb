@@ -7,8 +7,8 @@ require './lib/recipe'
 class RecipeTest < Minitest::Test
 
   def setup
-    @ingredient_1 = Ingredient.new("Cheese", "C", 100)
-    @ingredient_2 = Ingredient.new("Macaroni", "oz", 30)
+    @ingredient_1 = Ingredient.new("Cheese", "C", 50)
+    @ingredient_2 = Ingredient.new("Macaroni", "oz", 200)
     @recipe_1 = Recipe.new("Mac and Cheese")
   end
 
