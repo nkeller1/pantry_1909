@@ -11,12 +11,8 @@ class Pantry
   end
 
   def restock(ingredient, amount)
-    x = @stock[:ingredient] =+ amount
-    y = []
-    @stock.each do |amt|
-      y << amt[1]
-    end
-    y.sum
+    @stock[:ingredient] =+ amount
+    @stock.values
   end
 
 end
